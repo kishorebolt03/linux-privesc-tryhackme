@@ -1,12 +1,36 @@
-
-sudo cat /root/flag.txt
-
-sudo cp /root/flag.txt .
-
-sudo bash
-
-sudo sort /root/flag.txt | tee flag.txt
-
-sudo mv /root/flag.txt .
+WELCOME ALL to linux Priv Esc basics
 
 
+after you SSH into the machine with the username password provided 
+you will get a user priv in that machine
+and when we see our permissions to access tools or dirs which belongs to root  using 
+
+>>sudo -l
+
+we see a lot of tools and dir that we can use as sudo.
+from those specified in the output of the command we see tha  "cat " command is executable as sudo  the below command will get you the flag
+
+>>>sudo cat /root/flag.txt
+
+copy command as sudo can access root files so the below command is used to copy and read the flag.txt
+
+>>sudo cp /root/flag.txt .
+>> cat flag.txt
+
+sudo bash will escalate us to root user with password of the current user so the below commands will get you the flag
+
+>>sudo bash
+>#cat /root/flag.txt
+
+
+using sort and tee as sudo will also  escalate us to the root dir access the below commands will get us the flag from root and to store it in the local dir also
+
+>>sudo sort /root/flag.txt | tee flag.txt
+
+move command can also be used to mv the flag file from the root dir and place it in the user dir 
+
+>>sudo mv /root/flag.txt .
+>>cat flag.txt
+
+
+and there are a lot more simple tools like nano, vim, vi, etc .. which can be used to privilege escalation in a linux machine 
