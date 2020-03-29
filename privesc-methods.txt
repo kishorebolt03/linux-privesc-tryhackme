@@ -1,0 +1,12 @@
+
+sudo cat /root/flag.txt
+
+sudo cp /root/flag.txt .
+
+sudo bash
+
+sudo sort /root/flag.txt | tee flag.txt
+
+sudo mv /root/flag.txt .
+
+
